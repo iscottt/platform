@@ -1,0 +1,144 @@
+$primary: #0052d9;
+$bg-color: #2d3136;
+$card-bg: rgb(42, 42, 83);
+$nav-bg: #37386e;
+$success: #67c23a;
+$warning: #e6a23c;
+$error: #f56c6c;
+$analogous: #33bbff;
+$white_default: #fff;
+$primary_gray: #5578a1;
+$primary_dark: #32465e;
+
+
+$gray_0: #000000;
+$gray_1: #EFF2F7;
+$gray_2: #D8E0EA;
+$gray_3: #CAD1DB;
+$gray_4: #9CA8B8;
+$gray_5: #67717D;
+$gray_6: #5C6570;
+$gray_7: #4E555D;
+$gray_8: #4E555D;
+$gray_9: #2C3137;
+$tip-color: #272C31;
+
+$scroll-color: #828c96;
+
+
+html {
+  --primary-color: #{$primary};
+
+  @for $i from 0 through 20 {
+    $value: if($i ==1, "05", $i * 5);
+    --primary-opacity-#{$value}: #{rgba($primary, calc(($i * 5) / 100))};
+  }
+
+  // 5的倍数，从0到100
+  --primary-gray: #{$primary_gray};
+
+  @for $i from 0 through 20 {
+    $value: if($i ==1, "05", $i * 5);
+    --primary-gray-opacity-#{$value}: #{rgba($primary_gray, calc(($i * 5) / 100))};
+  }
+
+  // 5的倍数，从0到100
+  --primary-dark: #{$primary_dark};
+
+  @for $i from 0 through 20 {
+    $value: if($i ==1, "05", $i * 5);
+    --primary-dark-opacity-#{$value}: #{rgba($primary_dark, calc(($i * 5) / 100))};
+  }
+
+  // 5的倍数，从0到100
+  @for $i from 0 through 20 {
+    $value: if($i ==1, "05", $i * 5);
+    --gray-opacity-#{$value}: #{rgba($gray_0, calc(($i * 5) / 100))};
+  }
+
+  --analogous-color: #{$analogous};
+
+  @for $i from 1 through 9 {
+    --analogous-opacity-#{$i}: #{rgba($analogous, calc($i / 10))};
+  }
+
+  // 5的倍数，从0到100
+  --white-default: #{$white_default};
+
+  @for $i from 0 through 20 {
+    $value: if($i ==1, "05", $i * 5);
+    --white-opacity-#{$value}: #{rgba($white_default, calc(($i * 5) / 100))};
+  }
+
+
+  --scroll-color: #{$scroll-color};
+
+  @for $i from 1 through 9 {
+    --scroll-opacity-#{$i}: #{rgba($scroll-color, calc($i / 10))};
+  }
+
+  --success-color: #{$success};
+
+  @for $i from 1 through 9 {
+    --success-opacity-#{$i}: #{rgba($success, calc($i / 10))};
+  }
+
+  --warning-color: #{$warning};
+
+  @for $i from 1 through 9 {
+    --warning-opacity-#{$i}: #{rgba($warning, calc($i / 10))};
+  }
+
+  --error-color: #{$error};
+
+  @for $i from 1 through 9 {
+    --error-opacity-#{$i}: #{rgba($error, calc($i / 10))};
+  }
+
+  --gray-0: #{$gray_0};
+  --gray-1: #{$gray_1};
+  --gray-2: #{$gray_2};
+  --gray-3: #{$gray_3};
+  --gray-4: #{$gray_4};
+  --gray-5: #{$gray_5};
+  --gray-6: #{$gray_6};
+  --gray-7: #{$gray_7};
+  --gray-8: #{$gray_8};
+  --gray-9: #{$gray_9} !important;
+
+  --text-color: #{$gray_1};
+  --text-color-2: #{$gray_2};
+  --text-color-3: #{mix($gray_2, $gray_3, 25%)};
+  --text-color-4: #{$gray_3};
+
+  --border-color-0: #{mix($gray_6, $gray_5)};
+  --border-color: #{$gray_6};
+  --border-color-2: #{$gray_7};
+  --border-color-3: #{$gray_8};
+
+
+  @for $i from 1 through 9 {
+    --primary-opacity-#{$i}: #{rgba($primary, calc($i/10))};
+  }
+
+  --bg-color: #{$bg-color};
+  --card-bg: #{$card-bg};
+  --nav-bg: #{$nav-bg};
+  --text-color: #CAD1DB;
+  --success-color: #{$success} !important;
+  --error-color: #{$error};
+  --tip-color: #{$tip-color};
+
+  --magazine-bg: linear-gradient(#fff, transparent 20%, transparent 95%, rgba(255, 255, 255, .3));
+  --card-radial: radial-gradient(circle farthest-side at bottom, #000 33%, transparent), linear-gradient(transparent, #000);
+  --card-padding: 6px;
+  --card-radius: 12px;
+  --card-height: 380px;
+  --inner-padding: 1.2rem;
+  --inner-radius: calc(var(--card-radius) - var(--card-padding) / 2 - 1px);  
+  --card-inset: 0 0 0 1px #ffffff80 inset,
+  0 1px #fff inset,
+  0 0.75em 1em rgba(0, 30, 60, .15);
+  --inset-shadow: 0 0 0 1px #fffc,
+  0 0 0 1px #00000012 inset;
+}
